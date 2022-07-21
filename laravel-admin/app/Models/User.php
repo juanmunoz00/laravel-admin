@@ -14,4 +14,9 @@ class User extends Authenticatable
 
     /*Esto permite crear un usuario directamente a través de la API y el controlador */
     protected $guarded = [];
+    
+    protected $hidden = [
+        'password'
+    ];
+
 }

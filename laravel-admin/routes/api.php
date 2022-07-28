@@ -36,6 +36,9 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::delete('users/{id}',[UserController::class, 'destroy']);
     */
 
+    Route::put('users/info',[UserController::class, 'updateInfo']);
+    Route::put('users/password',[UserController::class, 'updatePassword']);
+
     Route::apiResource('users', UserController::class);
 
 });
